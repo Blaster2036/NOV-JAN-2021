@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\ofrometa\source\repos\INTEC\NOV-JUN-2021\ExampleIV\db.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\angel\OneDrive - INTEC\4. Trimestre 4\Programs\Me\NOV-JAN-2021\ExampleIV\db.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

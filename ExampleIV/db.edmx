@@ -27,6 +27,25 @@
           <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
           <Property Name="CodigoPostal" Type="varchar" MaxLength="6" />
         </EntityType>
+        <EntityType Name="1103314_Dealer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cedula" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="OwnersName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OwnersSurName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="VBrand" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="VModel" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="VYear" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="VColor" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="VVIN" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VLicensePlate" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="SeaboardDate" Type="date" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" />
+        </EntityType>
         <EntityType Name="Student">
           <Key>
             <PropertyRef Name="Id" />
@@ -45,6 +64,7 @@
         </EntityType>
         <EntityContainer Name="ExampleIVBOStoreContainer">
           <EntitySet Name="1077982_Ciudadano" EntityType="Self.1077982_Ciudadano" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="1103314_Dealer" EntityType="Self.1103314_Dealer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -70,6 +90,7 @@
         <EntityContainer Name="nov_jan_2021Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Student" EntityType="Self.Student" />
           <EntitySet Name="C1077982_Ciudadano" EntityType="ExampleIV.BO.C1077982_Ciudadano" />
+          <EntitySet Name="C1103314_Dealer" EntityType="ExampleIV.BO.C1103314_Dealer" />
         </EntityContainer>
         <EntityType Name="C1077982_Ciudadano">
           <Key>
@@ -92,6 +113,25 @@
           <Property Name="Foto" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
           <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="CodigoPostal" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="C1103314_Dealer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" />
+          <Property Name="Cedula" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="OwnersName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OwnersSurName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="VBrand" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="VModel" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="VYear" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="VColor" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="VVIN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VLicensePlate" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="SeaboardDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -136,6 +176,26 @@
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Cedula" ColumnName="Cedula" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C1103314_Dealer">
+            <EntityTypeMapping TypeName="ExampleIV.BO.C1103314_Dealer">
+              <MappingFragment StoreEntitySet="1103314_Dealer">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="SeaboardDate" ColumnName="SeaboardDate" />
+                <ScalarProperty Name="VLicensePlate" ColumnName="VLicensePlate" />
+                <ScalarProperty Name="VVIN" ColumnName="VVIN" />
+                <ScalarProperty Name="VColor" ColumnName="VColor" />
+                <ScalarProperty Name="VYear" ColumnName="VYear" />
+                <ScalarProperty Name="VModel" ColumnName="VModel" />
+                <ScalarProperty Name="VBrand" ColumnName="VBrand" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="OwnersSurName" ColumnName="OwnersSurName" />
+                <ScalarProperty Name="OwnersName" ColumnName="OwnersName" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

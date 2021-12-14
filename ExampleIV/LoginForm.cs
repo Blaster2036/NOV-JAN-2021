@@ -36,7 +36,8 @@ namespace ExampleIV
             }
 
             //var form = new MainForm(student);
-            var form = new _1077982.MainForm();
+            //var form = new _1077982.MainForm();
+            var form = new _1103314_Dealer.Búsqueda();
             form.Show(); //Showing MainForm
             this.Hide(); //Hidden LoginForm
         }
